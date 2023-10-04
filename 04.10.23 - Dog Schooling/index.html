@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Centrum szkoleniowe dla psów</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="all">
+  <header></header>
+  <section>
+    <table>
+      <tr>
+        <td><img src="piesek1.png" alt="pies"></td>
+        <td><img src="piesek2.png" alt="pies"></td>
+        <td><img src="piesek3.png" alt="pies"></td>
+        <td><img src="piesek4.png" alt="pies"></td>
+        <td><img src="piesek5.png" alt="pies"></td>
+        <td><img src="piesek6.png" alt="pies"></td>
+        <td><img src="piesek7.png" alt="pies"></td>
+        <td><img src="piesek8.png" alt="pies"></td>
+      </tr>
+    </table>
+    <p>
+      Nie ma na świecie przyjaźni, która trwa wiecznie.<br>
+      Jedynym wyjątkiem jest ta, którą obdarza nas pies.
+    </p>
+    <h3>Konrad Lorenz</h3>
+  </section>
+  <aside>
+    <p>
+      Kursy w naszym ośrodku prowadzone są w sposób rzetelny.
+      Atmosfera jest przyjazna zwierzętom i ich opiekunom.
+      Zapewniamy indywidualne podejście do każdego psa i jego przewodnika.
+    </p>
+    <p>
+      Staramy się, aby każdy z uczestników czuł się komfortowo.
+      Szkolenie szczeniaków i dorosłych psów dostosowujemy do temperamentu zwierzęcia oraz jego wieku,
+      ponieważ każdy pies wymaga indywidualnego podejścia i zastosowania odpowiednich technik szkoleniowych.
+    </p>
+    <p>
+      Podczas trwania kursu nasi instruktorzy służą swoim wsparciem i doświadczeniem,
+      dzięki czemu szybko nawiążesz kontakt ze swoim psiakiem.
+    </p>
+  </aside>
+  <main>
+    <h2>KALENDARZ SZKOLEŃ</h2>
+    <table>
+      <tr>
+        <th>Nazwa szkolenia</th>
+        <th>Data rozpoczęcia</th>
+        <th>Koszt</th>
+      </tr>
+      <tr>
+        <td>Psie przedszkole (grupa P1)</td>
+        <td>03-10-2020</td>
+        <td>500zł</td>
+      </tr>
+      <tr>
+        <td>Posłuszeństwo psa (grupa P2)</td>
+        <td>10-10-2020</td>
+        <td>600zł</td>
+      </tr>
+      <tr>
+        <td>osłuszeństwo psa (grupa P3)</td>
+        <td>07-11-2020</td>
+        <td>600zł</td>
+      </tr>
+      <tr>
+        <td>Psie przedszkole (grupa P4)</td>
+        <td>14-11-2020</td>
+        <td>500zł</td>
+      </tr>
+    </table>
+
+    <h2>Formualarz zgłoszeniowy</h2>
+    <form action="" method="post">
+      <fieldset>
+        <legend>Dane właściciela</legend>
+        <label for="name">Imię:</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="surname">Nazwisko: </label>
+        <input type="text" name="surname" id="surname"><br>
+        <label for="email">Adres mailowy:</label>
+        <input type="email" name="email" id="email"><br>
+      </fieldset>
+      <fieldset>
+        <legend>Dane psa</legend>
+        <label for="dog-name">Imię:</label>
+        <input type="text" name="dog-name" id="dog-name"><br>
+        <label for="breed">Rasa: </label>
+        <input type="text" name="breed" id="breed"><br>
+        <label for="birth-date">Adres mailowy:</label>
+        <input type="date" name="birth-date" id="birth-date"><br>
+        <label for="schooling-type">Typ szkolenia:</label>
+        <select name="schooling-type" id="schooling-type">
+          <option value="group-1">Psie przedszkole (P1)</option>
+          <option value="group-2">Posłuszeństwo psa (P2)</option>
+          <option value="group-3">Posłuszeństwo psa (P3)</option>
+          <option value="group-4">Psie przedszkole (P4)</option>
+        </select>
+        <input type="submit" value="Wyślij zgłoszenie">
+      </fieldset>
+    </form>
+  </main>
+</div>
+</body>
+</html>
