@@ -1,0 +1,7 @@
+SELECT wlasciciel.Imie, wlasciciel.Nazwisko, pies.Imie FROM wlasciciel, pies WHERE 1;
+
+SELECT pies.Imie, grupa.Nazwa FROM pies, grupa, szkolenie WHERE (pies.Id = szkolenie.IdPsa AND szkolenie.IdSzkolenia = grupa.IdSzkolenia) AND (grupa.IdSzkolenia = 1 OR grupa.IdSzkolenia = 3);
+
+CREATE USER 'Adam'@'localhost' IDENTIFIED BY 'Ada23!Ko';
+
+GRANT INSERT, UPDATE, SELECT ON wlasciciel TO 'Adam'@'localhost';
