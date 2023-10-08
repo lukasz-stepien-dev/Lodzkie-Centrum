@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -9,7 +12,7 @@
 <div id="all">
   <header></header>
   <section>
-    <table>
+    <table id="images">
       <tr>
         <td><img src="piesek1.png" alt="pies"></td>
         <td><img src="piesek2.png" alt="pies"></td>
@@ -21,7 +24,7 @@
         <td><img src="piesek8.png" alt="pies"></td>
       </tr>
     </table>
-    <p>
+    <p id="quote">
       Nie ma na świecie przyjaźni, która trwa wiecznie.<br>
       Jedynym wyjątkiem jest ta, którą obdarza nas pies.
     </p>
@@ -33,11 +36,13 @@
       Atmosfera jest przyjazna zwierzętom i ich opiekunom.
       Zapewniamy indywidualne podejście do każdego psa i jego przewodnika.
     </p>
+    <br>
     <p>
       Staramy się, aby każdy z uczestników czuł się komfortowo.
       Szkolenie szczeniaków i dorosłych psów dostosowujemy do temperamentu zwierzęcia oraz jego wieku,
       ponieważ każdy pies wymaga indywidualnego podejścia i zastosowania odpowiednich technik szkoleniowych.
     </p>
+    <br>
     <p>
       Podczas trwania kursu nasi instruktorzy służą swoim wsparciem i doświadczeniem,
       dzięki czemu szybko nawiążesz kontakt ze swoim psiakiem.
@@ -45,7 +50,7 @@
   </aside>
   <main>
     <h2>KALENDARZ SZKOLEŃ</h2>
-    <table>
+    <table id="info">
       <tr>
         <th>Nazwa szkolenia</th>
         <th>Data rozpoczęcia</th>
@@ -74,32 +79,60 @@
     </table>
 
     <h2>Formualarz zgłoszeniowy</h2>
-    <form action="" method="post">
+    <form action="send.php" method="post">
       <fieldset>
         <legend>Dane właściciela</legend>
-        <label for="name">Imię:</label>
-        <input type="text" name="name" id="name"><br>
-        <label for="surname">Nazwisko: </label>
-        <input type="text" name="surname" id="surname"><br>
-        <label for="email">Adres mailowy:</label>
-        <input type="email" name="email" id="email"><br>
+        <table>
+          <tr>
+            <td><label for="name">Imię:</label></td>
+            <td><input type="text" name="name" id="name"></td>
+          </tr>
+          <tr>
+            <td><label for="surname">Nazwisko: </label></td>
+            <td><input type="text" name="surname" id="surname"></td>
+          </tr>
+          <tr>
+            <td><label for="email">Adres mailowy:</label></td>
+            <td><input type="email" name="email" id="email"><br></td>
+          </tr>
+        </table>
       </fieldset>
       <fieldset>
         <legend>Dane psa</legend>
-        <label for="dog-name">Imię:</label>
-        <input type="text" name="dog-name" id="dog-name"><br>
-        <label for="breed">Rasa: </label>
-        <input type="text" name="breed" id="breed"><br>
-        <label for="birth-date">Adres mailowy:</label>
-        <input type="date" name="birth-date" id="birth-date"><br>
-        <label for="schooling-type">Typ szkolenia:</label>
-        <select name="schooling-type" id="schooling-type">
-          <option value="group-1">Psie przedszkole (P1)</option>
-          <option value="group-2">Posłuszeństwo psa (P2)</option>
-          <option value="group-3">Posłuszeństwo psa (P3)</option>
-          <option value="group-4">Psie przedszkole (P4)</option>
-        </select>
-        <input type="submit" value="Wyślij zgłoszenie">
+        <table>
+          <tr>
+            <td><label for="dog-name">Imię:</label></td>
+            <td><input type="text" name="dog-name" id="dog-name"></td>
+          </tr>
+          <tr>
+            <td><label for="breed">Rasa: </label></td>
+            <td><input type="text" name="breed" id="breed"></td>
+          </tr>
+          <tr>
+            <td><label for="birth-date">Data urodzenia:</label></td>
+            <td><input type="date" name="birth-date" id="birth-date"></td>
+          </tr>
+          <tr>
+            <td><label for="schooling-type">Typ szkolenia:</label></td>
+            <td>
+              <select name="schooling-type" id="schooling-type">
+                <option value="1">Psie przedszkole (P1)</option>
+                <option value="2">Posłuszeństwo psa (P2)</option>
+                <option value="4">Posłuszeństwo psa (P3)</option>
+                <option value="3">Psie przedszkole (P4)</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="submit" value="Wyślij zgłoszenie"></td>
+          </tr>
+        </table>
+          <?php
+            if ($_SESSION['send']) {
+                echo "Zgłoszenie zostało zapisane w bazie";
+            }
+          ?>
       </fieldset>
     </form>
   </main>
