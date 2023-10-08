@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dcd3b6;
+}
+
+#all {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header, section {
+    width: 100%;
+}
+
+header {
+    width: 10%;
+    background-color: #906030;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 8px;
+    font-weight: bold;
+}
+
+section {
+    height: 35%;
+    background-color: #433d38;
+}
+
+aside, main {
+    width: 50%;
+    height: 57%;
+    float: left;
+
+}
+
+aside {
+    background-color: #dddddd;
+    font-size: 20px;
+}
+
+form {
+    margin-left: 5%;
+}
+
+input {
+}
+
+fieldset {
+    display: block;
+    float: left;
+    width: 300px;
+    height: 150px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+#info td {
+    text-align: center;
+    border: solid 2px #663300;
+}
+
+h2 {
+    color: #663300;
+    letter-spacing: 8px;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+    text-align: right;
+}
+
+aside p {
+    text-justify: inter-word;
+    padding: 0 15px;
+    line-height: 1.5;
+}
+
+#images {
+    width: 100%;
+    text-align: center;
+}
+
+#info {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border: 2px solid #663300;
+}
+
+#quote {
+    font-style: italic;
+    color: white;
+    font-size: 20px;
+    text-align: right;
+}
